@@ -1,0 +1,17 @@
+.map {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;  
+    /* padding-left: 5.5%; */
+}
+.footer1{
+    bottom: 100%;
+} 
+.footer1.activo{
+    bottom: 0
+}
+.btn-flotante.activo{
+    background-color: orange;
+    color: gray;
+}
