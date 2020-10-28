@@ -1,4 +1,4 @@
-const urlsafe = ''
+const urlsafe = 'https://cors-anywhere.herokuapp.com/'
 const urlCali='http://ws-idesc.cali.gov.co:8081/geoserver/pot_2014/wms'
 var os= new ol.layer.Tile({
     visible: true,
@@ -39,7 +39,7 @@ var os2= new ol.layer.Tile({ //Parametros WMS
   var redGeodCali = new ol.layer.Tile({ //fuente WMS
     visible: true,
     source: new ol.source.TileWMS({
-        url:urlsafe + urlCali,
+        url:urlsafe + 'http://ws-idesc.cali.gov.co:8081/geoserver/idesc/wms',
         params:{LAYERS: 'mc_red_control_geodesico', STYLES: ''}   //Red Geodesica Cali
     }),crossOrigin: 'anonymous',
     name:'redGeodCl'
@@ -47,7 +47,7 @@ var os2= new ol.layer.Tile({ //Parametros WMS
   var manzanasCali = new ol.layer.Tile({ //fuente WMS
     visible: true,
     source: new ol.source.TileWMS({
-        url:urlsafe + urlCali,
+        url:'http://ws-idesc.cali.gov.co:8081/geoserver/idesc/wms',
         params:{LAYERS: 'est_estrato_social_lado_manzana', STYLES: ''}   //manzana
     }),crossOrigin: 'anonymous',
     name:'manzanasCl'
