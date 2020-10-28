@@ -1,4 +1,4 @@
-const urlsafe = 'https://cors-anywhere.herokuapp.com/'
+const urlsafe = ''
 const urlCali='http://ws-idesc.cali.gov.co:8081/geoserver/pot_2014/wms'
 var os= new ol.layer.Tile({
     visible: true,
