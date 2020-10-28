@@ -1,3 +1,5 @@
+const urlsafe = 'https://cors-anywhere.herokuapp.com/'
+const urlCali='http://ws-idesc.cali.gov.co:8081/geoserver/pot_2014/wms'
 var os= new ol.layer.Tile({
     visible: true,
     preload: Infinity,
@@ -13,7 +15,7 @@ var os2= new ol.layer.Tile({ //Parametros WMS
   var curvasCali = new ol.layer.Tile({ //fuente WMS
       visible: true,
       source: new ol.source.TileWMS({
-          url:'http://ws-idesc.cali.gov.co:8081/geoserver/pot_2014/wms',
+          url:urlsafe + urlCali,
           params:{LAYERS: 'amb_eep_curvas_proteccion_cimas', STYLES: ''} //Curvas de Nivel Cali
       }),crossOrigin: 'anonymous',
       name:'CurvasCl'
@@ -21,7 +23,7 @@ var os2= new ol.layer.Tile({ //Parametros WMS
   var BarriosCali = new ol.layer.Tile({ //fuente WMS
       visible: true,
       source: new ol.source.TileWMS({
-          url:'http://ws-idesc.cali.gov.co:8081/geoserver/pot_2014/wms',
+          url:urlsafe + urlCali,
           params:{LAYERS: 'epu_barrios_priorizados_espacio_publico', STYLES: ''}  //Barrios Cali
       }),crossOrigin: 'anonymous',
       name:'BarriosCl'
@@ -29,7 +31,7 @@ var os2= new ol.layer.Tile({ //Parametros WMS
   var perimetroUrbCali = new ol.layer.Tile({ //fuente WMS
     visible: true,
     source: new ol.source.TileWMS({
-        url:'http://ws-idesc.cali.gov.co:8081/geoserver/pot_2014/wms',
+        url:urlsafe + urlCali,
         params:{LAYERS: 'bcs_lim_perimetro_urbano', STYLES: ''}   //Perimetro Cali
     }),crossOrigin: 'anonymous',
     name:'perimetroUrbCl'
@@ -37,7 +39,7 @@ var os2= new ol.layer.Tile({ //Parametros WMS
   var redGeodCali = new ol.layer.Tile({ //fuente WMS
     visible: true,
     source: new ol.source.TileWMS({
-        url:'http://ws-idesc.cali.gov.co:8081/geoserver/idesc/wms',
+        url:urlsafe + urlCali,
         params:{LAYERS: 'mc_red_control_geodesico', STYLES: ''}   //Red Geodesica Cali
     }),crossOrigin: 'anonymous',
     name:'redGeodCl'
@@ -45,7 +47,7 @@ var os2= new ol.layer.Tile({ //Parametros WMS
   var manzanasCali = new ol.layer.Tile({ //fuente WMS
     visible: true,
     source: new ol.source.TileWMS({
-        url:'http://ws-idesc.cali.gov.co:8081/geoserver/idesc/wms',
+        url:urlsafe + urlCali,
         params:{LAYERS: 'est_estrato_social_lado_manzana', STYLES: ''}   //manzana
     }),crossOrigin: 'anonymous',
     name:'manzanasCl'
